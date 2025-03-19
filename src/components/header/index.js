@@ -3,9 +3,10 @@ import Logo from '../../assets/images/logo.jpg';
 import { FaAngleDown, FaRegCircle, FaRegCircleUser } from 'react-icons/fa6';
 import CountryDropdown from '../countrydropdown';
 import { Button, ButtonBase } from '@mui/material';
-import { IoIosSearch } from 'react-icons/io';
 import { FiUser } from 'react-icons/fi';
 import { IoBagOutline } from 'react-icons/io5';
+import SearchBox from './searchbox';
+import Navigation from './navigation';
 
 const Header = () => {
     return (
@@ -28,12 +29,7 @@ const Header = () => {
                             <div className='col-sm-10 d-flex align-items-center part2'>
                                 <CountryDropdown />
 
-                                {/* {Header Search Start Here} */}
-                                <div className='headerSearch ml-3 mr-3' >
-                                    <input type='text' placeholder='Tìm kiếm sản phẩm' />
-                                    <Button><IoIosSearch /></Button>
-                                </div>
-                                {/* {Header Search Start Here} */}
+                                <SearchBox />
 
                                 <div className='part3 d-flex align-items-center ml-auto'>
                                     <Button className='circle mr-3'><FiUser /></Button>
@@ -49,6 +45,8 @@ const Header = () => {
                         </div>
                     </div>
                 </header>
+
+                <Navigation/>
             </div>
         </>
     )

@@ -14,7 +14,18 @@ body {
   background: #233a95;
 }
 
-.container{
+@media (min-width:1300px) {
+
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    max-width: 1200px;
+  }
+}
+
+.container {
   max-width: 90%;
 
 }
@@ -29,18 +40,18 @@ body {
   font-weight: 500;
 }
 
-.headerWrapper .header{
+.headerWrapper .header {
   width: 100%;
   height: auto;
-  padding: 10px 0px;
+  padding: 25px 0px;
 }
 
-.logoWrapper img{
+.logoWrapper img {
   width: 100%;
 
 }
 
-.headerWrapper .header .part2 .countryDrop{
+.headerWrapper .header .part2 .countryDrop {
   width: 170px;
   height: 60px;
   min-width: 170px;
@@ -50,19 +61,19 @@ body {
   padding: 10px 15px !important;
 }
 
-.headerWrapper .header .part2 .countryDrop{
+.headerWrapper .header .part2 .countryDrop {
   text-align: left;
   justify-content: flex-start !important;
 }
 
-.headerWrapper .header .part2 .countryDrop .label{
+.headerWrapper .header .part2 .countryDrop .label {
   font-size: 12px !important;
   text-transform: capitalize !important;
-  color: rgba(0, 0, 0, 0.4) !important ;
+  color: rgba(0, 0, 0, 0.4) !important;
   line-height: 16px;
 }
 
-.headerWrapper .header .part2 .countryDrop .name{
+.headerWrapper .header .part2 .countryDrop .name {
   font-size: 14px !important;
   text-transform: capitalize !important;
   color: #233a95 !important;
@@ -70,11 +81,11 @@ body {
   line-height: 16px
 }
 
-.headerWrapper .header .part2 .countryDrop .span.ml-auto svg{
+.headerWrapper .header .part2 .countryDrop .span.ml-auto svg {
   opacity: 0.7;
 }
 
-header .headerSearch{
+header .headerSearch {
   width: 60%;
   height: 60px;
   background: #f3f4f7;
@@ -84,7 +95,7 @@ header .headerSearch{
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-header .headerSearch input{
+header .headerSearch input {
   background: transparent !important;
   outline: none !important;
   font-size: 18px;
@@ -95,11 +106,11 @@ header .headerSearch input{
   padding: 0px 20px !important;
 }
 
-header .headerSearch input::-webkit-input-placeholder{
+header .headerSearch input::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.6);
 }
 
-header .headerSearch button{
+header .headerSearch button {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -109,14 +120,14 @@ header .headerSearch button{
   width: 40px !important;
   border-radius: 50% !important;
   color: #000;
-  
+
 }
 
-header .headerSearch button svg{
+header .headerSearch button svg {
   font-size: 25px;
 }
 
-header .part3 .circle{
+header .part3 .circle {
   align-items: center;
   justify-content: center;
   min-width: 45px !important;
@@ -127,32 +138,88 @@ header .part3 .circle{
   color: #000;
 }
 
-header .part3 .circle svg{
+header .part3 .circle svg {
   font-size: 22px;
 
 }
 
-.cartTab button .price{
+.cartTab button .price {
   font-size: 18px;
   color: rgba(0, 0, 0, 0.8);
   font-weight: 700;
 }
 
-.cartTab button{
+.cartTab button {
   background: #fff1ee !important;
 }
 
-.cartTab button svg{
+.cartTab button svg {
   color: #ea2b0f !important;
 }
 
-.cartTab .count{
+.cartTab .count {
   position: absolute;
   top: -6px;
   right: -4px;
   background: #ea2b0f;
   border-radius: 50%;
-  color:#fff;
+  color: #fff;
   width: 20px;
   height: 20px;
+}
+
+nav .allCatTab {
+  background: #2bbef9;
+  padding: 10px 15px !important;
+  border-radius: 30px;
+}
+
+nav .allCatTab {
+  color: #fff;
+}
+
+nav .allCatTab:hover {
+  background: #2bbef9;
+}
+
+nav .allCatTab .text {
+  font-weight: 600;
+}
+
+nav .allCatTab svg {
+  font-size: 20px !important;
+}
+
+nav .allCatTab .icon1 svg {
+  font-size: 20px !important;
+}
+
+nav .allCatTab .icon2 svg {
+  font-size: 15px !important;
+}
+
+nav .navPart2 ul {
+  margin-bottom: 0px;
+}
+
+nav .navPart2 ul li a {
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 25px;
+}
+
+nav .navPart2 ul li a:hover {
+  background: #f0faff;
+  color: #2bbef9;
+}
+
+nav .navPart2 ul li a svg {
+  font-size: 20px;
 }

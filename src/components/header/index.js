@@ -31,13 +31,13 @@ const Header = () => {
                             </div>
 
                             <div className='col-sm-10 d-flex align-items-center part2'>
-                               {
-                                      context.countryList.length!==0 &&  <CountryDropdown />
-                                       
-                                     
-                                      
-                               }
-                               
+                                {
+                                    context.countryList.length !== 0 && <CountryDropdown />
+
+
+
+                                }
+
 
                                 <SearchBox />
 
@@ -56,7 +56,7 @@ const Header = () => {
                     </div>
                 </header>
 
-                <Navigation/>
+                <Navigation />
             </div>
         </>
     )

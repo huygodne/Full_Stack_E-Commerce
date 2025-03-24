@@ -5,7 +5,7 @@ import { FaAngleDown } from 'react-icons/fa6';
 import { IoIosSearch } from 'react-icons/io';
 import { MdClose, MdFilterList } from 'react-icons/md';
 import { MyContext } from '../../App';
-import React, { useState, useContext, useEffect , use } from 'react';
+import React, { useState, useContext, useEffect, use } from 'react';
 
 
 
@@ -23,7 +23,7 @@ const CountryDropdown = () => {
 
     const context = useContext(MyContext);
 
-    const selectCountry = (index,country) => {
+    const selectCountry = (index, country) => {
         setselectedTab(index);
         setIsOpenModal(false);
         context.setselectedCountry(country)
@@ -40,20 +40,20 @@ const CountryDropdown = () => {
                 return item.country.toLowerCase().includes(keyword);
             });
             setCountryList(list);
-        }else{
+        } else {
             setCountryList(context.countryList);
         }
-       
-        
+
+
     }
-    
+
 
     return (
         <>
             <Button className='countryDrop' onClick={() => setIsOpenModal(true)}>
                 <div className='info d-flex flex-column'>
                     <span className='label'>Vị trí của bạn</span>
-                    <span className='name'>{context.selectedCountry!== "" ? context.selectedCountry ?.substr(0,10)   : 'select Location' }</span>
+                    <span className='name'>{context.selectedCountry !== "" ? context.selectedCountry?.substr(0, 10) : 'select Location'}</span>
                 </div>
                 <span className='ml-auto'><FaAngleDown /></span>
             </Button>
@@ -64,25 +64,25 @@ const CountryDropdown = () => {
                 <Button className='close_' onClick={() => setIsOpenModal(false)}><MdClose /></Button>
 
                 <div className='headerSearch w-100' >
-                    <input type='text' placeholder='Tìm kiếm địa chỉ...'onChange={filterList} />
+                    <input type='text' placeholder='Tìm kiếm địa chỉ...' onChange={filterList} />
                     <Button><IoIosSearch /></Button>
                 </div>
 
                 <ul className='countryList mt-3'>
                     {
-                       countryList?.length !== 0 && countryList?.map((item, index) => {
+                        countryList?.length !== 0 && countryList?.map((item, index) => {
                             return (
-                                <li key={index}><Button onClick={() => selectCountry(index,item.country)}
-                                className={`${selectedTab === index ? 'active' : ''}`}
+                                <li key={index}><Button onClick={() => selectCountry(index, item.country)}
+                                    className={`${selectedTab === index ? 'active' : ''}`}
 
-                            >{item.country}</Button></li>
-                )
-                    })
-                }
+                                >{item.country}</Button></li>
+                            )
+                        })
+                    }
 
 
-            </ul>
-        </Dialog >
+                </ul>
+            </Dialog >
         </>
     )
 }

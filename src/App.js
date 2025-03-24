@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import Home from './pages/home';
 import Header from './components/header';
 import axios from 'axios';
-import { createContext} from 'react';
+import { createContext } from 'react';
 import { useState, useEffect } from 'react';
 
 
@@ -17,15 +17,15 @@ function App() {
   }, []);
 
   const getCountry = async (url) => {
-    const responsive = await axios.get(url).then((res)=>{
+    const responsive = await axios.get(url).then((res) => {
       setcountryList(res.data.data);
       console.log(res.data.data[0].country);
     })
   }
 
-  
+
   const values = {
-    countryList ,
+    countryList,
     setselectedCountry,
     selectedCountry
   }
@@ -43,4 +43,4 @@ function App() {
 }
 
 export default App;
-export {MyContext}
+export { MyContext }

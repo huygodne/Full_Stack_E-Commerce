@@ -1,8 +1,8 @@
 import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css"
-import Home from './pages/home';
-import Header from './components/header';
+import Home from './Pages/Home';
+import Header from './Components/Header';
 import axios from 'axios';
 import { createContext } from 'react';
 import { useState, useEffect } from 'react';

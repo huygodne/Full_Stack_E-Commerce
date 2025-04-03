@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 import Logo from '../../assets/images/logo.jpg';
 import { FaAngleDown, FaRegCircle, FaRegCircleUser } from 'react-icons/fa6';
-import CountryDropdown from '../countrydropdown';
+import CountryDropdown from '../CountryDropdown';
 import { Button, ButtonBase } from '@mui/material';
 import { FiUser } from 'react-icons/fi';
 import { IoBagOutline } from 'react-icons/io5';
-import SearchBox from './searchbox';
-import Navigation from './navigation';
+import SearchBox from './SearchBox';
+import Navigation from './Navigation';
 import { useContext } from 'react';
 import { MyContext } from '../../App';
 
@@ -22,7 +22,6 @@ const Header = () => {
                     </div>
                 </div>
 
-
                 <header className="header">
                     <div className="container">
                         <div className="row">
@@ -33,11 +32,7 @@ const Header = () => {
                             <div className='col-sm-10 d-flex align-items-center part2'>
                                 {
                                     context.countryList.length !== 0 && <CountryDropdown />
-
-
-
                                 }
-
 
                                 <SearchBox />
 

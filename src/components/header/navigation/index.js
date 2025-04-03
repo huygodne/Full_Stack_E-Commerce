@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { CiHome } from 'react-icons/ci';
 import { FaAngleDown } from 'react-icons/fa6';
 import { IoIosMenu } from 'react-icons/io';
-
+import { FaAngleRight } from "react-icons/fa";
 const Navigation = () => {
 
     const [isopenSidebarVal, setisopenSidebarVal] = useState(false);
@@ -14,7 +14,7 @@ const Navigation = () => {
                 <div className='row'>
                     <div className='col-sm-2 navPart1'>
                         <div className='catWrapper'>
-                            <Button className='allCatTab align-items-center' onClick={()=>setisopenSidebarVal(!isopenSidebarVal)}>
+                            <Button className='allCatTab align-items-center' onClick={() => setisopenSidebarVal(!isopenSidebarVal)}>
                                 <span><IoIosMenu className='icon1 mr-2' /></span>
                                 <span className='text'>ALL CATEGORIES</span>
                                 <span><FaAngleDown className='icon2 ml-2' /></span>
@@ -22,24 +22,32 @@ const Navigation = () => {
 
                             <div className={`sidebarNav ${isopenSidebarVal === true ? 'open' : ''}`}>
                                 <ul>
-                                    <li>
-                                        <Link to="/"><Button>Men</Button></Link>
-                                        <Link to="/"><Button>Women</Button></Link>
-                                        <Link to="/"><Button>Beauty</Button></Link>
-                                        <Link to="/"><Button>Watches</Button></Link>
-                                        <Link to="/"><Button>Kids</Button></Link>
-                                        <Link to="/"><Button>Gift</Button></Link>
-                                        <Link to="/"><Button>Blog</Button></Link>
-                                        <Link to="/"><Button>Contact</Button></Link>
-                                        <Link to="/"><Button>Men</Button></Link>
-                                        <Link to="/"><Button>Women</Button></Link>
-                                        <Link to="/"><Button>Beauty</Button></Link>
-                                        <Link to="/"><Button>Watches</Button></Link>
-                                        <Link to="/"><Button>Kids</Button></Link>
-                                        <Link to="/"><Button>Gift</Button></Link>
-                                        <Link to="/"><Button>Blog</Button></Link>
-                                        <Link to="/"><Button>Contact</Button></Link>
+                                    <li><Link to="/"><Button>Men<FaAngleRight className='ml-auto'/></Button></Link>
+                                        <div className='submenu'>
+                                            <Link to="/"><Button>footware</Button></Link>
+                                            <Link to="/"><Button>watches</Button></Link>
+                                            <Link to="/"><Button>footware</Button></Link>
+                                            <Link to="/"><Button>watches</Button></Link>
+                                            <Link to="/"><Button>footware</Button></Link>
+                                            <Link to="/"><Button>watches</Button></Link>
+                                        </div>
                                     </li>
+                                    <li><Link to="/"><Button>Women</Button></Link></li>
+                                    <li><Link to="/"><Button>Beauty</Button></Link></li>
+                                    <li><Link to="/"><Button>Watches</Button></Link></li>
+                                    <li><Link to="/"><Button>Kids</Button></Link></li>
+                                    <li><Link to="/"><Button>Gift</Button></Link></li>
+                                    <li><Link to="/"><Button>Blog</Button></Link></li>
+                                    <li><Link to="/"><Button>Contact</Button></Link></li>
+                                    <li><Link to="/"><Button>Men</Button></Link></li>
+                                    <li><Link to="/"><Button>Women</Button></Link></li>
+                                    <li><Link to="/"><Button>Beauty</Button></Link></li>
+                                    <li><Link to="/"><Button>Watches</Button></Link></li>
+                                    <li><Link to="/"><Button>Kids</Button></Link></li>
+                                    <li><Link to="/"><Button>Gift</Button></Link></li>
+                                    <li><Link to="/"><Button>Blog</Button></Link></li>
+                                    <li><Link to="/"><Button>Contact</Button></Link></li>
+
                                 </ul>
                             </div>
                         </div>

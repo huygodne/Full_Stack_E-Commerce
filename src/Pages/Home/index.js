@@ -17,6 +17,7 @@ import banner4 from '../../assets/images/banner4.jpg';
 import newsLetterImg from '../../assets/images/coupon.png';
 import { IoMailOutline } from 'react-icons/io5';
 
+
 const Home = () => {
 
     // var productSliderOptions = {
@@ -165,13 +166,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
 
         </>
     );

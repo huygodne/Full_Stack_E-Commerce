@@ -59,7 +59,7 @@ const ProductModal = (props) => {
 
             <hr />
 
-            <div className='row mt-2|productDetaileModal'>
+            <div className='row mt-2 productDetailedModal'>
                 <div className='col-md-5'>
                     <div className='productZoom position-relative'>
 

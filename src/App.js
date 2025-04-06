@@ -7,11 +7,15 @@ import axios from 'axios';
 import { createContext } from 'react';
 import { useState, useEffect } from 'react';
 import Footer from './Components/Footer';
+import ProductModal from './Components/ProductModal';
 
 const MyContext = createContext();
 function App() {
+
   const [countryList, setcountryList] = useState([]);
   const [selectedCountry, setselectedCountry] = useState('');
+  const [isOpenProductModal, setisOpenProductModal] = useState(false);
+
   useEffect(() => {
     getCountry("https://countriesnow.space/api/v0.1/countries/");
   }, []);
@@ -27,7 +31,9 @@ function App() {
   const values = {
     countryList,
     setselectedCountry,
-    selectedCountry
+    selectedCountry,
+    setisOpenProductModal,
+    isOpenProductModal
   }
 
   return (
@@ -37,7 +43,12 @@ function App() {
         <Routes>
           <Route path="/" exact={true} element={<Home />} />
         </Routes>
-        <Footer/>
+        <Footer />
+
+        {
+          isOpenProductModal === true && <ProductModal />
+        }
+
       </MyContext.Provider>
     </BrowserRouter>
   );
